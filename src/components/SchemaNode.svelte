@@ -10,7 +10,7 @@
       class="text-gray-700">{parentFields.join('.')}{parentFields.length ? '.' : ''}</span><span>{node.name}</span>
   </p>
   {#if node.description}
-    <p class="text-gray-600 text-xs ml-2">{node.description}</p>
+    <p class={`${node.name === 'app_channel' ? 'text-red-600' : 'text-gray-600'} text-xs ml-2`}>{node.description}</p>
   {/if}
   {#if parentFields.length === 2 && parentFields[0] === 'metrics'}
     <p class="text-gray-600 text-xs ml-2">
